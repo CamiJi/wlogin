@@ -2,6 +2,10 @@
 
 <?php $this->start('main_content') ?>
 	<h2>Let's code.</h2>
-	<p>Vous avez atteint la page d'accueil. Bravo.</p>
-	<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
+	<?php // print_r($w_user); ?>
+
+	<?php if(isset($email)): ?>
+		<p>Bienvenue <?= $this->e($email); ?></p>
+	<?php endif; ?>
+	
 <?php $this->stop('main_content') ?>
